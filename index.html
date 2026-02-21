@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>masax66x - iOS Apps</title>
+    <style>
+        /* 全体のベーススタイル */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        p.subtitle {
+            color: #86868b;
+            margin-top: 8px;
+            font-size: 18px;
+        }
+        
+        /* コンテンツエリア */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        /* アプリカードのデザイン */
+        .app-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 32px 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        /* アプリアイコン */
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background-color: #e5e5ea;
+            border-radius: 26px; /* iOSのアイコンの丸みに近い比率 */
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* テキストエリア */
+        .app-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0 0 12px 0;
+        }
+        .app-desc {
+            font-size: 15px;
+            color: #515154;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        /* リンクボタン */
+        .btn-notion {
+            background-color: #f2f2f2;
+            color: #1d1d1f;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+            display: inline-block;
+            width: 80%;
+        }
+        .btn-notion:hover {
+            background-color: #e5e5ea;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #86868b;
+            font-size: 14px;
+            border-top: 1px solid #d2d2d7;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>masax66x</h1>
+    <p class="subtitle">iOS Application Portfolio</p>
+</header>
+
+<div class="container">
+    <div class="app-grid">
+        
+        <div class="app-card">
+            <img src="images/pachisca.png" alt="PachiSCA" class="app-icon" onerror="this.src='https://via.placeholder.com/120/eeeeee/86868b?text=Icon'">
+            <h2 class="app-title">PachiSCA</h2>
+            <p class="app-desc">PachiSCAの概要をここに入力します。シンプルで分かりやすい説明がおすすめです。</p>
+            <a href="https://leeward-ton-616.notion.site/PachiSCA-30cac8cb794e804baee2f85e294e82a7" target="_blank" class="btn-notion">サポートページ (Notion)</a>
+        </div>
+
+        <div class="app-card">
+            <img src="images/xstock.png" alt="X株ストック" class="app-icon" onerror="this.src='https://via.placeholder.com/120/eeeeee/86868b?text=Icon'">
+            <h2 class="app-title">X株ストック</h2>
+            <p class="app-desc">気になる銘柄をサクサク管理。投資活動をサポートするストックアプリです。</p>
+            <a href="https://leeward-ton-616.notion.site/X-2dfac8cb794e803587a8eaffd6ccadaf" target="_blank" class="btn-notion">サポートページ (Notion)</a>
+        </div>
+
+        <div class="app-card">
+            <img src="images/houkouku.png" alt="HOUKOUKU CAM" class="app-icon" onerror="this.src='https://via.placeholder.com/120/eeeeee/86868b?text=Icon'">
+            <h2 class="app-title">HOUKOUKU CAM</h2>
+            <p class="app-desc">HOUKOUKU CAMの概要をここに入力します。どんな課題を解決するカメラアプリかを記載します。</p>
+            <a href="https://leeward-ton-616.notion.site/HOUKOUKU-CAM-2ebac8cb794e8004b676d724b7607a5f" target="_blank" class="btn-notion">サポートページ (Notion)</a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 masax66x. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
