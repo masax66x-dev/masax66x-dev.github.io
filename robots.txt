@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://masax66x-dev.github.io/sitemap.xml
