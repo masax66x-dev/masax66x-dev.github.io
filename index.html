@@ -6,10 +6,10 @@
     <title>masax66x - iOS Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://masax66x-dev.github.io/">
-    <meta name="description" content="Portfolio of masax66x - iOS developer creating unique and useful applications including ClonzMaker, SCAtoPDF, and more.">
+    <meta name="description" content="Portfolio of masax66x - iOS developer creating unique and useful applications.">
 </head>
 <body>
     <div class="background-blobs">
@@ -20,21 +20,36 @@
 
     <nav>
         <div class="nav-content">
-            <span class="logo-text">masax66x</span>
+            <a href="index.html" class="logo-text" style="text-decoration: none; color: inherit;">masax66x</a>
         </div>
     </nav>
 
     <main>
         <header class="hero">
-            <h1 class="hero-title">Creating Apps that <span class="gradient-text">Inspire & Simplify</span>.</h1>
+            <h1 class="hero-title">Creating Apps that <span class="gradient-text">Inspire &amp; Simplify</span>.</h1>
             <p class="hero-subtitle">iOS Developer based in Japan. Focused on AI integration and intuitive user experiences.</p>
         </header>
 
         <section class="app-section">
             <div class="grid">
-                <!-- ClonzMaker (Highlighted) -->
-                <div class="card featured-card">
-                    <span class="badge">New Release</span>
+                <!-- BokeMon -->
+                <div class="card">
+                    <div class="card-content">
+                        <img src="assets/bokemon.jpg" alt="BokeMon" class="app-icon">
+                        <div class="app-info">
+                            <h2 class="app-name">BokeMon</h2>
+                            <p class="app-tagline">AI自動文字認識・プライバシー保護ぼかしアプリ</p>
+                            <p class="app-description">AIが画像内の文字や顔を自動で認識し、ワンタップでプライバシーを守るぼかし加工を施します。SNS投稿前の必須ツール。</p>
+                            <div class="actions">
+                                <span class="btn btn-primary" style="opacity: 0.6; cursor: default;">Coming Soon</span>
+                                <a href="bokemon.html" class="btn btn-outline">Privacy Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ClonzMaker -->
+                <div class="card">
                     <div class="card-content">
                         <img src="assets/clonzmaker.jpg" alt="ClonzMaker" class="app-icon">
                         <div class="app-info">
@@ -118,7 +133,7 @@
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 masax66x. Built with Passion & AI.</p>
+            <p>© 2026 masax66x. Built with Passion &amp; AI.</p>
         </div>
     </footer>
 </body>
