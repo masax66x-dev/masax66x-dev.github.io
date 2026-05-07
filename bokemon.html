@@ -21,8 +21,14 @@
         .policy-container h2 {
             font-weight: 800;
             margin-top: 40px;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: #fff;
+        }
+        .policy-container h3 {
+            font-weight: 700;
+            margin-top: 30px;
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
         }
         .policy-container p, .policy-container li {
             color: rgba(255,255,255,0.8);
@@ -34,6 +40,13 @@
         }
         .policy-container li {
             margin-bottom: 12px;
+        }
+        .lang-section {
+            padding-bottom: 40px;
+            margin-bottom: 60px;
+        }
+        .lang-section:first-child {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
     </style>
 </head>
@@ -53,33 +66,64 @@
     <main>
         <header class="hero">
             <h1 class="hero-title">Privacy Policy for <span class="gradient-text">BokeMon</span></h1>
-            <p class="hero-subtitle">Last Updated: 2026-04-22</p>
+            <p class="hero-subtitle">最終更新日 / Last Updated: 2026-04-22</p>
         </header>
 
         <section class="app-section" style="padding-top: 0;">
             <div class="policy-container">
-                <p><strong>BokeMon</strong> values your privacy. This policy explains how we handle your data.</p>
+                <!-- 日本語セクション -->
+                <div class="lang-section">
+                    <h2 style="color: #64b5f6;">プライバシーポリシー (日本語)</h2>
+                    <p><strong>BokeMon</strong>は、お客様のプライバシーを尊重しています。本ポリシーでは、お客様のデータの取り扱いについて説明します。</p>
 
-                <h2>1. Image Data Processing</h2>
-                <ul>
-                    <li><strong>Local Processing</strong>: All image processing (text detection and blurring) is performed <strong>locally on your device</strong> using Apple's Vision and Core Image frameworks.</li>
-                    <li><strong>No Cloud Uploads</strong>: Your photos are never uploaded to any server or cloud service for processing.</li>
-                    <li><strong>Temporary Access</strong>: The app accesses your photo library only when you explicitly select a photo or save a processed image.</li>
-                </ul>
+                    <h3>1. 画像データの処理</h3>
+                    <ul>
+                        <li><strong>ローカル処理</strong>: すべての画像処理（文字認識・ぼかし）は、AppleのVisionおよびCore Imageフレームワークを使用して、お客様のデバイス上で<strong>ローカルに実行</strong>されます。</li>
+                        <li><strong>クラウドへのアップロードなし</strong>: お客様の写真は、処理のためにサーバーやクラウドサービスにアップロードされることはありません。</li>
+                        <li><strong>一時的なアクセス</strong>: アプリが写真ライブラリにアクセスするのは、お客様が明示的に写真を選択したとき、または加工した画像を保存するときのみです。</li>
+                    </ul>
 
-                <h2>2. Data Collection</h2>
-                <ul>
-                    <li><strong>No Personal Information</strong>: BokeMon does not collect or store any personal information (names, email addresses, etc.).</li>
-                    <li><strong>Anonymous Usage Data</strong>: We may collect anonymous usage data (e.g., which features are used most) to improve the app, provided you have opted in via system settings.</li>
-                </ul>
+                    <h3>2. データの収集</h3>
+                    <ul>
+                        <li><strong>個人情報なし</strong>: BokeMonは、個人情報（名前、メールアドレスなど）を収集または保存しません。</li>
+                        <li><strong>匿名の利用データ</strong>: アプリの改善を目的として、匿名の利用データを収集する場合があります。これはシステム設定で許可されている場合に限られます。</li>
+                    </ul>
 
-                <h2>3. Third-Party Services</h2>
-                <ul>
-                    <li><strong>Advertising</strong>: We use third-party advertising services (e.g., Google AdMob) to show ads. These services may collect device identifiers to provide relevant ads. Please refer to their respective privacy policies for details.</li>
-                </ul>
+                    <h3>3. 第三者サービス</h3>
+                    <ul>
+                        <li><strong>広告</strong>: 広告を表示するために、第三者の広告サービス（Google AdMobなど）を使用しています。これらのサービスは、関連性の高い広告を提供するためにデバイス識別子を収集する場合があります。詳細は各サービスのプライバシーポリシーをご参照ください。</li>
+                    </ul>
 
-                <h2>4. Contact</h2>
-                <p>If you have any questions, please contact us at: <a href="mailto:masax66x@gmail.com" style="color: #64b5f6; text-decoration: none;">masax66x@gmail.com</a></p>
+                    <h3>4. お問い合わせ</h3>
+                    <p>ご質問がある場合は、こちらまでご連絡ください: <a href="mailto:masax66x@gmail.com" style="color: #64b5f6; text-decoration: none;">masax66x@gmail.com</a></p>
+                </div>
+
+                <!-- English Section -->
+                <div class="lang-section" style="margin-bottom: 0; padding-bottom: 0;">
+                    <h2 style="color: #64b5f6;">Privacy Policy (English)</h2>
+                    <p><strong>BokeMon</strong> values your privacy. This policy explains how we handle your data.</p>
+
+                    <h3>1. Image Data Processing</h3>
+                    <ul>
+                        <li><strong>Local Processing</strong>: All image processing (text detection and blurring) is performed <strong>locally on your device</strong> using Apple's Vision and Core Image frameworks.</li>
+                        <li><strong>No Cloud Uploads</strong>: Your photos are never uploaded to any server or cloud service for processing.</li>
+                        <li><strong>Temporary Access</strong>: The app accesses your photo library only when you explicitly select a photo or save a processed image.</li>
+                    </ul>
+
+                    <h3>2. Data Collection</h3>
+                    <ul>
+                        <li><strong>No Personal Information</strong>: BokeMon does not collect or store any personal information (names, email addresses, etc.).</li>
+                        <li><strong>Anonymous Usage Data</strong>: We may collect anonymous usage data (e.g., which features are used most) to improve the app, provided you have opted in via system settings.</li>
+                    </ul>
+
+                    <h3>3. Third-Party Services</h3>
+                    <ul>
+                        <li><strong>Advertising</strong>: We use third-party advertising services (e.g., Google AdMob) to show ads. These services may collect device identifiers to provide relevant ads. Please refer to their respective privacy policies for details.</li>
+                    </ul>
+
+                    <h3>4. Contact</h3>
+                    <p>If you have any questions, please contact us at: <a href="mailto:masax66x@gmail.com" style="color: #64b5f6; text-decoration: none;">masax66x@gmail.com</a></p>
+                </div>
             </div>
         </section>
     </main>
