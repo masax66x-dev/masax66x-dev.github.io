@@ -15,7 +15,7 @@
             border-radius: 24px;
             border: 1px solid rgba(255,255,255,0.05);
             backdrop-filter: blur(20px);
-            max-width: 800px;
+            max-width: 860px;
             margin: 0 auto;
         }
         .policy-container h2 {
@@ -32,7 +32,7 @@
         }
         .policy-container p, .policy-container li {
             color: rgba(255,255,255,0.8);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             line-height: 1.8;
         }
         .policy-container ul {
@@ -48,15 +48,63 @@
         .lang-section:first-child {
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-        .feature-badge {
+        .step-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            padding: 24px;
+            margin-top: 24px;
+            margin-bottom: 24px;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .step-card:hover {
+            border-color: rgba(100, 181, 246, 0.4);
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .step-card {
+                flex-direction: column;
+                text-align: left;
+                padding: 18px;
+            }
+        }
+        .step-img {
+            width: 220px;
+            max-width: 100%;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.12);
+            flex-shrink: 0;
+            background: #000;
+        }
+        .step-content {
+            flex-grow: 1;
+        }
+        .step-badge {
+            background: linear-gradient(135deg, #64b5f6, #1976d2);
+            color: #fff;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.82rem;
             display: inline-block;
-            background: rgba(100, 181, 246, 0.15);
-            color: #64b5f6;
-            padding: 3px 10px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-left: 8px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 4px 0 10px 0;
+        }
+        .step-desc {
+            font-size: 0.98rem;
+            color: rgba(255,255,255,0.78);
+            line-height: 1.65;
+            margin: 0;
         }
     </style>
 </head>
@@ -83,7 +131,7 @@
             <div class="policy-container">
                 <!-- 日本語セクション -->
                 <div class="lang-section">
-                    <h2 style="color: #64b5f6;">プライバシーポリシー & 使い方サポート (日本語)</h2>
+                    <h2 style="color: #64b5f6;">プライバシーポリシー & 使い方マニュアル (日本語)</h2>
                     <p><strong>HOUKOUKU CAM（ホウコク・カム）</strong>をご利用いただきありがとうございます。本アプリは、写真に「方位・仰角」「撮影地の住所・緯度経度」「撮影日時」「画像スタンプ」「自由な文字」をリアルタイムまたは既存の写真に重ねて記録・編集できるカメラ＆フォトエディターアプリです。</p>
                     <p>現場記録や工事報告、不動産調査の証拠写真から、美味しいご飯・カフェ巡り・グルメのSNS記録、旅行・推し活の記念フォトまで幅広くご活用いただけます。</p>
 
@@ -95,32 +143,111 @@
                         <li><strong>EXIFメタデータの保持</strong>: 写真保存時に、標準の写真アプリのマップや日付検索でスムーズに管理できるよう、位置情報（ジオタグ）と撮影日時メタデータを保持して保存します。</li>
                     </ul>
 
-                    <h3>2. 基本的な使い方・主な機能</h3>
-                    <ul>
-                        <li><strong>カメラ撮影モード</strong>:
-                            <ul>
-                                <li>画面上に「方位」「仰角」「住所」「日時」をリアルタイム表示。各パネルは指でドラッグして好きな位置へ移動できます。</li>
-                                <li>場所パネルをタップすると、「住所」と「緯度・経度」の表示を瞬時に切り替えられます。</li>
-                                <li>画面上部のフラッシュボタンで「自動 / ON / OFF」を切り替え可能。</li>
-                                <li>画像メニュー（左下）からスタンプや照準マークを最大2枚重ねて撮影可能。文字メニューからフォントや色、枠線を細かく調整したテキストを追加可能。</li>
-                                <li>撮影保存後、表示される「すぐに共有」ボタンからInstagram、X、LINE、チャットツールへワンタップで送信可能。ファイル名は「HOUKOUKU_CAM_日付-番号.jpg」で整理しやすく自動生成されます。</li>
-                            </ul>
-                        </li>
-                        <li><strong>写真編集モード（写真を素材にする）</strong>:
-                            <ul>
-                                <li>アルバムにある既存の写真（美味しいご飯や過去の現場写真）を取り込み、撮影当時の位置情報や日時を引き継いだままスタンプや文字を自由に後乗せ加工できます。</li>
-                                <li><strong>オートエフェクト</strong>: 写真の明るい部分を自動認識し、「キラキラ」「ラブラブ」「汗」「涙」を散りばめるデコレーション機能。タップするたびに華やかに進化し、「デコレーションを消去」でいつでも元通りに戻せます。</li>
-                            </ul>
-                        </li>
-                        <li><strong>AI自動切り抜き & プリセット機能</strong>:
-                            <ul>
-                                <li>アルバムの写真から被写体をワンタップで背景透過スタンプ化（「✂️AI切抜」）。</li>
-                                <li>「合格」「済」などの定番はんこ、花丸、絵文字があらかじめ初期搭載されています。</li>
-                                <li>よく使う配置は「星リスト」からプリセットとして保存可能。長押しでピン留めすると次回起動時に自動で読み込まれます。</li>
-                                <li>設定画面（歯車アイコン）から位置ロックをONにすれば、撮影中の誤操作によるズレを防止できます。本体を振るだけで直前の操作を戻せるシェイクUNDOにも対応しています。</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <h3>2. 画面でわかるビジュアル操作マニュアル</h3>
+                    <p>アプリの基本的な画面遷移と各機能の使い方です。</p>
+
+                    <!-- STEP 1 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step1_startup.png" alt="起動・モード選択画面" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 1</span>
+                            <h4 class="step-title">起動・モード選択画面</h4>
+                            <p class="step-desc">
+                                アプリを起動するとシンプルなモード選択画面が表示されます。<br>
+                                ・<strong>青色ボタン「カメラで撮影」</strong>: リアルタイムに方位・仰角・住所を確認しながら撮影するメイン画面へ遷移します。<br>
+                                ・<strong>橙色ボタン「写真を素材にする」</strong>: アルバムの写真（美味しい料理や過去の現場写真）を取り込み、後から情報を重ねて加工できます。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step2_camera.png" alt="カメラ撮影モード" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 2</span>
+                            <h4 class="step-title">カメラ撮影モード（リアルタイムHUD）</h4>
+                            <p class="step-desc">
+                                画面上に「方位」「仰角」「住所」「日時」がリアルタイム表示されます。<br>
+                                ・各パネルは指でドラッグして好きな位置へ移動可能。<br>
+                                ・<strong>住所パネルをタップ</strong>すると「住所」と「緯度・経度」が回転切替。<br>
+                                ・上部の<strong>⚡フラッシュボタン</strong>で「自動 / ON / OFF」を切替可能。<br>
+                                ・撮影直後は「すぐに共有」ボタンからSNS・LINEへワンタップ送信。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step3_editor.png" alt="写真編集モード" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 3</span>
+                            <h4 class="step-title">写真編集モード（既存写真への重畳）</h4>
+                            <p class="step-desc">
+                                アルバムから写真（例: 東京都庁）を取り込み、撮影当時の位置情報や日時を引き継いだままスタンプや文字を追加できます。<br>
+                                ・<strong>上部スイッチ</strong>: ［背景］で写真自体の位置・拡大調整、［合成］でスタンプや文字の配置を操作。<br>
+                                ・<strong>🪄魔法の杖（オートエフェクト）</strong>: 写真編集モード限定で「キラキラ」「ラブラブ」「汗」「涙」を重畳可能。タップするたびに進化し、「デコレーションを消去」でいつでも元に戻せます。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step4_stamp_menu.png" alt="スタンプ・画像メニュー" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 4</span>
+                            <h4 class="step-title">スタンプ・画像メニュー</h4>
+                            <p class="step-desc">
+                                画面下部の写真アイコンからスタンプメニューを開きます。<br>
+                                ・<strong>初期搭載スタンプ</strong>: 「合格」「済」などの定番はんこ、花丸、絵文字があらかじめセットされています。<br>
+                                ・<strong>✂️AI切抜機能</strong>: アルバムの写真から人物や料理をAIがワンタップで背景透過スタンプ化。<br>
+                                ・<strong>原本保存</strong>: 作成したスタンプをお気に入りリストへ永続保存できます。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 5 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step5_text_edit.png" alt="テキスト編集シート" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 5</span>
+                            <h4 class="step-title">テキスト編集シート</h4>
+                            <p class="step-desc">
+                                画面下部の「A」アイコンから文字編集シートを開きます。<br>
+                                ・自由なテキスト（メモ、工事名、料理名、星評価、感想など）を入力。<br>
+                                ・文字色、フォント、背景、縁取りの濃さを細かくカスタマイズでき、どんな背景写真の上でも文字がくっきり読めるよう調整できます。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 6 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step6_presets.png" alt="プリセット管理シート" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 6</span>
+                            <h4 class="step-title">プリセット管理シート</h4>
+                            <p class="step-desc">
+                                画面右上の星アイコンからプリセットシートを開きます。<br>
+                                ・現在の配置・スタンプ・テキストをお好みの名前で保存し、ワンタップで完全再現。<br>
+                                ・リスト項目を<strong>長押し</strong>するとピン留め（📌）され、<strong>次回アプリ起動時に自動で設定をロード</strong>します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 7 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step7_settings.png" alt="設定シート" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 7</span>
+                            <h4 class="step-title">設定 & 便利機能</h4>
+                            <p class="step-desc">
+                                画面右上の歯車アイコンから各種設定を変更できます。<br>
+                                ・方位、仰角、場所、日時、スタンプ、テキストの個別表示ON/OFF。<br>
+                                ・<strong>🔒位置操作を許可スイッチ</strong>: OFFにすると画面上の配置を固定（ロック）し、撮影中の不意なズレを防止。<br>
+                                ・<strong>本体をシェイク</strong>: 直前の移動操作を1つ前に戻すUNDO機能。<br>
+                                ・<strong>下部バー長押し</strong>: 見失ったパネルを初期位置に戻す迷子レスキュー機能。
+                            </p>
+                        </div>
+                    </div>
 
                     <h3>3. 第三者サービス（広告配信について）</h3>
                     <ul>
@@ -135,7 +262,7 @@
 
                 <!-- English Section -->
                 <div class="lang-section" style="margin-bottom: 0; padding-bottom: 0;">
-                    <h2 style="color: #64b5f6;">Privacy Policy & Support (English)</h2>
+                    <h2 style="color: #64b5f6;">Privacy Policy & User Manual (English)</h2>
                     <p>Thank you for using <strong>HOUKOUKU CAM</strong>. This app is an all-in-one camera and photo editor that allows you to overlay heading, elevation, GPS address, date/time, image stamps, and customizable text in real time or onto existing album photos.</p>
 
                     <h3>1. Privacy & On-Device Processing</h3>
@@ -146,31 +273,102 @@
                         <li><strong>EXIF Metadata Preservation</strong>: When saving photos, original GPS geotags and creation timestamps are embedded so you can easily organize and search them within the iOS Photos app.</li>
                     </ul>
 
-                    <h3>2. Key Features & How to Use</h3>
-                    <ul>
-                        <li><strong>Live Camera Capture</strong>:
-                            <ul>
-                                <li>Real-time HUD displaying compass heading (degrees), tilt angle (elevation), street address, GPS coordinates, and timestamp. Drag any element freely to position it anywhere on screen.</li>
-                                <li>Tap the address panel to toggle between street address and latitude/longitude coordinates.</li>
-                                <li>Flash toggle button (Auto / On / Off) located at the top bar.</li>
-                                <li>Overlay up to 2 image stamps and customizable text with border/font styling.</li>
-                                <li>Quick Share button appears right after saving, allowing 1-tap export to Instagram, X, LINE, or messaging apps. Clean file naming format (<code>HOUKOUKU_CAM_YYYYMMDD-001.jpg</code>).</li>
-                            </ul>
-                        </li>
-                        <li><strong>Photo Editor Mode</strong>:
-                            <ul>
-                                <li>Import existing photos from your album (foodie logs, travel memories, or site photos) with automatic EXIF location detection.</li>
-                                <li>Auto Effects: Sparkle, Love, Sweat, and Tears dynamically detect bright areas. Tap repeatedly to evolve the effect, or select "Clear Effects" to reset anytime.</li>
-                            </ul>
-                        </li>
-                        <li><strong>AI Cutout & Presets</strong>:
-                            <ul>
-                                <li>One-tap AI cutout to extract subjects into transparent stickers.</li>
-                                <li>Built-in approval seals, hanamaru marks, and emojis ready to use out of the box.</li>
-                                <li>Save custom layouts as Presets and long-press to auto-load on app launch. Position lock and shake-to-undo supported.</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <h3>2. Visual Step-by-Step Guide</h3>
+
+                    <!-- EN STEP 1 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step1_startup.png" alt="Startup Screen" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 1</span>
+                            <h4 class="step-title">Startup & Mode Selection</h4>
+                            <p class="step-desc">
+                                Choose your desired workflow upon launch:<br>
+                                ・<strong>"Take a Photo" (Blue)</strong>: Live camera mode with real-time compass, elevation, and GPS overlays.<br>
+                                ・<strong>"Use an Existing Photo" (Orange)</strong>: Import photos from your library to overlay evidence, date, stamps, or text post-capture.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- EN STEP 2 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step2_camera.png" alt="Camera Mode" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 2</span>
+                            <h4 class="step-title">Live Camera Capture (HUD Overlay)</h4>
+                            <p class="step-desc">
+                                Real-time HUD displays compass heading, tilt angle (elevation), street address, and timestamp.<br>
+                                ・Drag any element to position it freely on screen.<br>
+                                ・Tap the address panel to toggle between address and GPS coordinates.<br>
+                                ・Top bar flash button toggles "Auto / On / Off".<br>
+                                ・Export photos instantly to social media via "Share Now".
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- EN STEP 3 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step3_editor.png" alt="Photo Editor Mode" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 3</span>
+                            <h4 class="step-title">Photo Editor Mode (Photo Overlay & Effects)</h4>
+                            <p class="step-desc">
+                                Import existing photos (e.g. city landmarks, site inspections, foodie logs) with automatic EXIF geotag detection.<br>
+                                ・<strong>Top Switch</strong>: Toggle between [Background] mode (pinch/pan base photo) and [Overlay] mode (move stamps/text).<br>
+                                ・<strong>Auto Effects (Wand Icon)</strong>: Add Sparkle, Love, Sweat, or Tears effects. Tap repeatedly to evolve the effect or select "Clear Effects" to reset anytime.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- EN STEP 4 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step4_stamp_menu.png" alt="Stamp Menu" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 4</span>
+                            <h4 class="step-title">Stamp & Image Menu (AI Cutout)</h4>
+                            <p class="step-desc">
+                                Open the stamp menu from the bottom photo icon.<br>
+                                ・<strong>Built-in Stamps</strong>: Pre-loaded approval seals, hanamaru marks, and emojis ready to use.<br>
+                                ・<strong>AI Cutout (✂️)</strong>: Automatically extract subjects from your photos into transparent stickers.<br>
+                                ・Save custom stickers to your favorites list for instant access.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- EN STEP 5 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step5_text_edit.png" alt="Text Edit Sheet" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 5</span>
+                            <h4 class="step-title">Customizable Text Editor</h4>
+                            <p class="step-desc">
+                                Add customizable text annotations with fonts, colors, and adjustable outline borders so your text stays readable on any photo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- EN STEP 6 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step6_presets.png" alt="Presets Sheet" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 6</span>
+                            <h4 class="step-title">Preset Layout Templates</h4>
+                            <p class="step-desc">
+                                Save your favorite layout combinations and recall them anytime. Long-press any preset to pin it (📌) and load it automatically whenever the app starts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- EN STEP 7 -->
+                    <div class="step-card">
+                        <img src="assets/manual/step7_settings.png" alt="Settings Sheet" class="step-img">
+                        <div class="step-content">
+                            <span class="step-badge">STEP 7</span>
+                            <h4 class="step-title">Settings & Interaction Controls</h4>
+                            <p class="step-desc">
+                                Toggle visibility for each overlay element. Turn off "Allow Adjustment" to lock element positions. Shake device to undo movements, or long-press bottom bar to rescue off-screen elements.
+                            </p>
+                        </div>
+                    </div>
 
                     <h3>3. Third-Party Services (Advertising)</h3>
                     <ul>
