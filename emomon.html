@@ -66,7 +66,7 @@
     <main>
         <header class="hero">
             <h1 class="hero-title">Privacy Policy & Support for <span class="gradient-text">EmoMon</span></h1>
-            <p class="hero-subtitle">最終更新日 / Last Updated: 2026-10-18</p>
+            <p class="hero-subtitle">最終更新日 / Last Updated: 2026-10-20</p>
         </header>
 
         <section class="app-section" style="padding-top: 0;">
@@ -74,27 +74,35 @@
                 <!-- 日本語セクション -->
                 <div class="lang-section">
                     <h2 style="color: #64b5f6;">プライバシーポリシー & サポート (日本語)</h2>
-                    <p><strong>EmoMon（エモモン）</strong>は、お客様のプライバシーを最優先に尊重しています。本ポリシーでは、お客様の写真やデータの取り扱いについて説明します。</p>
+                    <p><strong>EmoMon（エモモン）</strong>は、お客様のプライバシーを最優先に尊重しています。本ポリシーでは、お客様の写真や顔データ等の取り扱いについて詳しく説明します。</p>
 
                     <h3>1. 画像データの処理</h3>
                     <ul>
                         <li><strong>100% オンデバイス処理</strong>: AIによる顔検出（Apple Visionフレームワーク）や絵文字合成、ぼかし・ブラシ処理、テキスト描画などのすべての画像加工は、お客様のiPhone端末内で<strong>ローカルに実行</strong>されます。</li>
-                        <li><strong>クラウドへの送信なし</strong>: お客様が選択した写真や検出された顔データが、外部のサーバーやクラウドにアップロード・保存されることは一切ありません。オフライン環境でも完全にご利用いただけます。</li>
+                        <li><strong>クラウドへの送信なし</strong>: お客様が選択した写真が、外部のサーバーやクラウドにアップロード・保存されることは一切ありません。オフライン環境でも完全にご利用いただけます。</li>
                         <li><strong>写真ライブラリへのアクセス</strong>: アプリが写真ライブラリにアクセスするのは、お客様が明示的に編集したい写真を選択した際、および編集完了した高解像度画像を保存する際のみです。</li>
                     </ul>
 
-                    <h3>2. 個人情報の収集について</h3>
+                    <h3>2. 顔データ（Face Data）の取り扱いと保護（Guideline 5.1.1 準拠）</h3>
                     <ul>
-                        <li><strong>個人情報の非収集</strong>: EmoMonは、氏名、メールアドレス、連絡先、顔認識の生体認証データなどの個人情報を一切収集・保持しません。</li>
+                        <li><strong>収集する顔データ</strong>: EmoMonは、写真内の顔の位置を特定するために、AppleのVisionフレームワーク（<code>VNDetectFaceRectanglesRequest</code>）を使用して顔の境界矩形（2D座標情報）を一時的に計算します。顔の特徴点、生体認証データ、個人の特定につながる顔認識データは一切収集しません。</li>
+                        <li><strong>顔データの利用目的</strong>: 検出された顔の座標情報は、写真上の顔を覆い隠す絵文字スタンプの初期配置・自動スケーリングを行うためだけに、アプリの実行メモリ（RAM）上でのみ一時的に利用されます。これ以外の目的で利用されることは一切ありません。</li>
+                        <li><strong>保存および保持期間</strong>: 顔データは端末のストレージや外部サーバーに一切保存されません。編集中のセッション（メモリ上）でのみ一時的に保持され、新しい写真を選択した際、編集をリセットした際、またはアプリを終了・バックグラウンドに移動した際に<strong>即座に完全破棄・消去</strong>されます。</li>
+                        <li><strong>第三者への共有・開示</strong>: 顔データが第三者、外部パートナー、広告事業者、クラウドサービス等に提供・共有・転送されることは一切ありません。</li>
+                    </ul>
+
+                    <h3>3. 個人情報の収集について</h3>
+                    <ul>
+                        <li><strong>個人情報の非収集</strong>: EmoMonは、氏名、メールアドレス、連絡先、生体認証データなどの個人情報を一切収集・保持しません。</li>
                         <li><strong>匿名の統計データ</strong>: アプリのクラッシュ解析や品質改善を目的として、Appleの標準システムを介した匿名の統計情報（利用者が許可している場合のみ）を参照することがあります。</li>
                     </ul>
 
-                    <h3>3. 第三者サービス（広告配信）</h3>
+                    <h3>4. 第三者サービス（広告配信）</h3>
                     <ul>
-                        <li><strong>広告配信サービス</strong>: アプリ内では、無料提供を維持するためにGoogle AdMob等の第三者広告サービスを利用しています。これらのサービスは、関連性の高い広告表示のために広告識別子（IDFA等、利用者の許可に基づく）を利用する場合があります。詳細はGoogleのプライバシーポリシーをご確認ください。</li>
+                        <li><strong>広告配信サービス</strong>: アプリ内では、無料提供を維持するためにGoogle AdMob等の第三者広告サービスを利用しています。これらのサービスは、関連性の高い広告表示のために広告識別子（IDFA等、利用者の許可に基づく）を利用する場合があります。顔データや写真データが広告事業者に送信されることは絶対にありません。</li>
                     </ul>
 
-                    <h3>4. サポート・お問い合わせ</h3>
+                    <h3>5. サポート・お問い合わせ</h3>
                     <p>アプリの使い方に関するご質問、機能のご要望、不具合の報告などのお問い合わせは、以下までお気軽にご連絡ください：</p>
                     <p><a href="mailto:masax66x@gmail.com" style="color: #64b5f6; text-decoration: none; font-weight: bold;">masax66x@gmail.com</a></p>
                 </div>
@@ -102,27 +110,35 @@
                 <!-- English Section -->
                 <div class="lang-section" style="margin-bottom: 0; padding-bottom: 0;">
                     <h2 style="color: #64b5f6;">Privacy Policy & Support (English)</h2>
-                    <p><strong>EmoMon</strong> places the highest priority on your privacy. This policy explains how we handle your photos and data.</p>
+                    <p><strong>EmoMon</strong> places the highest priority on your privacy. This policy explains how we handle your photos, facial data, and privacy in full compliance with Apple's App Store Review Guidelines.</p>
 
                     <h3>1. Image Data Processing & Privacy</h3>
                     <ul>
                         <li><strong>100% On-Device Processing</strong>: All face detection (using Apple's native Vision framework), emoji overlays, blur/brush processing, and text rendering are performed <strong>strictly locally on your device</strong>.</li>
-                        <li><strong>No Cloud Uploads</strong>: Your photos and facial recognition data are never transmitted to, processed on, or stored on any external server or cloud service. The app operates completely offline.</li>
+                        <li><strong>No Cloud Uploads</strong>: Your photos are never transmitted to, processed on, or stored on any external server or cloud service. The app operates completely offline.</li>
                         <li><strong>Photo Library Access</strong>: The app accesses your photo library only when you explicitly select a photo to edit or save your edited high-resolution photo.</li>
                     </ul>
 
-                    <h3>2. Data Collection</h3>
+                    <h3>2. Face Data Handling & Protection (Guideline 5.1.1 Compliance)</h3>
+                    <ul>
+                        <li><strong>What Face Data We Collect</strong>: EmoMon uses Apple's native Vision framework (<code>VNDetectFaceRectanglesRequest</code>) to detect the bounding box coordinates (2D rectangular position and size) of faces within the user's selected photo in local memory. EmoMon does <strong>NOT</strong> collect facial recognition data, facial landmarks, biometric identifiers, or unique facial feature templates.</li>
+                        <li><strong>How Face Data Is Used</strong>: The detected bounding box coordinates are used solely in temporary device memory (RAM) to automatically position, scale, and overlay privacy-protecting emojis over the faces. The face data is used exclusively for this privacy masking functionality and for no other purpose.</li>
+                        <li><strong>Storage and Retention of Face Data</strong>: EmoMon does <strong>NOT</strong> store face data on the device's persistent storage, nor does it upload face data to any server or cloud service. Face data is retained temporarily only in active RAM during the current photo editing session. It is <strong>immediately and permanently discarded/deleted</strong> as soon as the user selects a new photo, discards the edit, or closes the app.</li>
+                        <li><strong>Sharing of Face Data with Third Parties</strong>: EmoMon does <strong>NOT</strong> share, transmit, disclose, or sell face data to any third parties, advertisers, cloud providers, or external partners under any circumstances.</li>
+                    </ul>
+
+                    <h3>3. Data Collection</h3>
                     <ul>
                         <li><strong>No Personal Information</strong>: EmoMon does not collect, track, or store any personal information (e.g., names, email addresses, biometric identifiers).</li>
                         <li><strong>Anonymous Diagnostics</strong>: We may receive anonymous crash logs or diagnostic reports provided by Apple if you have opted in via iOS system settings, strictly for bug fixing and stability improvements.</li>
                     </ul>
 
-                    <h3>3. Third-Party Services (Advertising)</h3>
+                    <h3>4. Third-Party Services (Advertising)</h3>
                     <ul>
-                        <li><strong>Advertising</strong>: To keep the app free, we use third-party advertising partners (Google AdMob). These services may collect device identifiers to serve relevant ads according to your App Tracking Transparency preferences. Please refer to Google's privacy policy for details.</li>
+                        <li><strong>Advertising</strong>: To keep the app free, we use third-party advertising partners (Google AdMob). These services may collect device identifiers to serve relevant ads according to your App Tracking Transparency preferences. Neither photo data nor face data is ever shared with or accessible to advertising partners.</li>
                     </ul>
 
-                    <h3>4. Support & Contact</h3>
+                    <h3>5. Support & Contact</h3>
                     <p>If you have any questions, feedback, feature requests, or need technical support, please contact us at:</p>
                     <p><a href="mailto:masax66x@gmail.com" style="color: #64b5f6; text-decoration: none; font-weight: bold;">masax66x@gmail.com</a></p>
                 </div>
