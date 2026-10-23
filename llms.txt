@@ -1,0 +1,42 @@
+# masax66x — iOS Apps Portfolio & Technical Documentation (LLMs / GEO Index)
+
+> Official developer portfolio of `MASAHIRO SAITO` (`masax66x`), an independent iOS developer in Japan building 100% on-device AI camera, document scanning, privacy, and utility apps for iPhone.
+> Main Portfolio URL: https://masax66x-dev.github.io/
+
+## All Published iOS Applications (Unified Support & Specifications)
+
+1. **[PachiSCA (パチスカ) — Blink to Scan Hands-Free Book Scanner](https://masax66x-dev.github.io/pachisca/)**
+   - **App Store:** https://apps.apple.com/jp/app/id6759353652
+   - **Summary:** Hold thick books open with both hands and close your eyes for 0.4s to trigger the camera shutter hands-free (`AVCaptureMultiCamSession` + Apple Vision `EAR`). Ideal for non-destructive book digitization (裁断しない自炊) and feeding books/textbooks into Generative AI (Gemini Notebook, ChatGPT, Claude).
+   - **Docs:** [spec.md](https://masax66x-dev.github.io/pachisca/spec.md) | [privacy.md](https://masax66x-dev.github.io/pachisca/privacy.md) | [terms.md](https://masax66x-dev.github.io/pachisca/terms.md)
+
+2. **[SCAtoPDF — Fast Photo-to-PDF Merger](https://masax66x-dev.github.io/scatopdf/)**
+   - **App Store:** https://apps.apple.com/jp/app/id6759510153
+   - **Summary:** Companion app to PachiSCA. Combines 50+ scanned book pages or photos from the `PachiSCA Scan` album into a single PDF in seconds with custom sorting (oldest, newest, selection order) and A4/original page sizing.
+   - **Docs:** [spec.md](https://masax66x-dev.github.io/scatopdf/spec.md) | [privacy.md](https://masax66x-dev.github.io/scatopdf/privacy.md) | [terms.md](https://masax66x-dev.github.io/scatopdf/terms.md)
+
+3. **[HOUKOUKU CAM (報告カメラ) — Compass, Elevation, Address & Stamp Overlay Camera](https://masax66x-dev.github.io/houkouku_cam.html)**
+   - **App Store:** https://apps.apple.com/jp/app/id6756608831
+   - **Summary:** Overlays real-time compass azimuth, elevation angle, GPS address/coordinates, timestamps, custom text, and AI subject cutout stamps onto live camera shots or existing photos. Condenses all needed information into a single photo for field reports, real estate surveys, and food/travel logs.
+
+4. **[EmoMon — On-Device AI Face Detection & Emoji Privacy Camera](https://masax66x-dev.github.io/emomon.html)**
+   - **App Store:** https://apps.apple.com/jp/app/id6824192437
+   - **Summary:** Automatically detects faces in photos using on-device AI and replaces them with customizable emoji stickers for effortless SNS privacy protection.
+
+5. **[BokeMon (ボケモン) — AI Text & Face Privacy Blur](https://masax66x-dev.github.io/bokemon.html)**
+   - **App Store:** https://apps.apple.com/jp/app/id6764519480
+   - **Summary:** Automatically detects faces and text in photos via on-device AI and applies privacy blur with one tap before sharing on social media.
+
+6. **[ClonzMaker — AI Subject Cutout & Floating Clone Video Maker](https://masax66x-dev.github.io/clonzmaker/)**
+   - **App Store:** https://apps.apple.com/jp/app/id6762304849
+   - **Summary:** Automatically cuts out subjects (pets, people, merch) from a single photo using on-device AI and generates floating/multiplying clone short videos.
+   - **Docs:** [spec.md](https://masax66x-dev.github.io/clonzmaker/spec.md) | [privacy.md](https://masax66x-dev.github.io/clonzmaker/privacy.md)
+
+7. **[1mmHeadBall — AI Face Detection Soccer Ball Collage & Video Maker](https://masax66x-dev.github.io/headball.html)**
+   - **App Store:** https://apps.apple.com/jp/app/id6781898961
+   - **Summary:** Detects faces with AI and balances a soccer ball right on top of heads with custom captions and short video export.
+
+8. **[X株ストック (XStock Stocker) — Japanese Stock Idea & Screenshot OCR Manager](https://masax66x-dev.github.io/xstock/)**
+   - **App Store:** https://apps.apple.com/jp/app/id6757352103
+   - **Summary:** Extracts 4-digit Japanese TSE stock codes and company names directly from screenshots via on-device OCR + built-in TSE company master, saving zoomable screenshots and investment memos locally.
+   - **Docs:** [spec.md](https://masax66x-dev.github.io/xstock/spec.md) | [privacy.md](https://masax66x-dev.github.io/xstock/privacy.md)

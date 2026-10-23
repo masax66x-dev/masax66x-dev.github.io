@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCAtoPDF | 大量の写真・スキャン画像を数秒で1つのPDFに一括変換・結合 — 無料iOSアプリ</title>
+    <meta name="description" content="iPhoneで撮影した複数の本・ノート・書類の写真を、選んだ順番のまま数秒で1つのPDFに一括変換。まばたきカメラPachiSCAと連携し、生成AI（Gemini Notebook / ChatGPT）への資料取り込みや非破壊自炊・レポート提出を最速化。">
+    <link rel="canonical" href="https://masax66x-dev.github.io/scatopdf/">
+
+    <!-- iOS Safari Smart App Banner -->
+    <meta name="apple-itunes-app" content="app-id=6759510153">
+
+    <!-- Open Graph / Twitter Card -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SCAtoPDF — 複数の写真を数秒で1つのPDFに一括変換・結合">
+    <meta property="og:description" content="60枚以上のスキャン画像もワンタップでPDF化！一括ソート・A4サイズ指定・ファイル名変更に対応。PachiSCAとの連携で生成AIへの資料取り込みが爆速で完結する無料iPhoneアプリ。">
+    <meta property="og:url" content="https://masax66x-dev.github.io/scatopdf/">
+    <meta property="og:image" content="https://masax66x-dev.github.io/assets/scatopdf_demo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="alternate" type="text/markdown" title="SCAtoPDF Specification (Markdown)" href="spec.md">
+    <link rel="privacy-policy" href="privacy.md">
+    <link rel="terms-of-service" href="terms.md">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background-color: #070b14; color: #f8fafc; }
+        .glass-card { background: rgba(15, 23, 42, 0.72); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(16px); }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SCAtoPDF",
+      "operatingSystem": "iOS 26.0 or later",
+      "applicationCategory": "UtilitiesApplication",
+      "url": "https://masax66x-dev.github.io/scatopdf/",
+      "downloadUrl": "https://apps.apple.com/app/scatopdf/id6759510153",
+      "screenshot": "https://masax66x-dev.github.io/assets/scatopdf_demo.jpg",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+      "author": { "@type": "Person", "name": "MASAHIRO SAITO", "url": "https://masax66x-dev.github.io/" },
+      "description": "複数の写真やスキャン画像を、選んだ順番のまま数秒で1つのPDFに一括変換・結合できる無料iOSアプリ。一括ソート・A4サイズ指定・PachiSCA連携に対応。",
+      "featureList": [
+        "複数画像（数十〜100枚以上）の高速一括PDF変換・結合",
+        "日付順・追加順の一括ソートおよびドラッグ並べ替え",
+        "ページサイズ設定（画像に合わせる / A4自動回転 / A4縦・横固定）とPDF画質調整",
+        "カスタムファイル名設定とアプリ内PDFプレビュー",
+        "100%オンデバイス処理（写真の外部サーバー送信ゼロ）"
+      ]
+    }
+    </script>
+</head>
+<body class="antialiased selection:bg-emerald-400 selection:text-slate-950">
+
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+            <div class="flex items-center gap-3">
+                <a href="../index.html" class="text-sm font-semibold text-slate-400 hover:text-white transition">← masax66x Apps</a>
+                <span class="text-slate-700">/</span>
+                <div class="flex items-center gap-2">
+                    <img src="../assets/scatopdf.jpg" alt="SCAtoPDF Icon" class="h-7 w-7 rounded-lg border border-white/15">
+                    <span class="font-extrabold tracking-tight text-white">SCAtoPDF</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="spec.md" class="hidden sm:inline-block text-xs font-medium text-slate-400 hover:text-emerald-300 transition">仕様書 (spec.md)</a>
+                <a href="https://apps.apple.com/app/scatopdf/id6759510153" target="_blank" rel="noopener" class="rounded-full bg-emerald-400 px-4 py-1.5 text-xs font-extrabold text-slate-950 shadow hover:bg-emerald-300 transition">
+                    App Store (無料)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 sm:px-6">
+        <section class="py-12 md:py-20">
+            <div class="grid items-center gap-10 lg:grid-cols-12">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3.5 py-1 text-xs font-bold text-emerald-400">
+                        <span>📑 爆速画像→PDF一括結合</span>
+                        <span>•</span>
+                        <span>100% 端末内処理・完全無料</span>
+                    </div>
+
+                    <h1 class="text-3xl font-black leading-tight tracking-tight sm:text-5xl">
+                        撮りためた本の写真を、<br>
+                        <span class="text-emerald-400">数秒で1つのPDFに結合。</span>
+                    </h1>
+
+                    <p class="text-base leading-relaxed text-slate-300 sm:text-lg">
+                        iPhoneで撮影した大量の書籍ページ・ノート・書類・レシートを、選んだ順番のまま瞬時に1つのPDFファイルへ変換。<br>
+                        まばたきハンズフリー撮影アプリ <strong><a href="../pachisca/" class="text-[#00FAEF] underline">PachiSCA</a></strong> と組み合わせれば、<strong>「両手フリーで連写 ➔ ワンタップでPDF化 ➔ 生成AI（Gemini Notebook / ChatGPT）へ投入」</strong>が最速で完結します。
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="https://apps.apple.com/app/scatopdf/id6759510153" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl bg-emerald-400 px-7 py-4 text-base font-black text-slate-950 shadow-lg transition hover:scale-[1.02] hover:bg-emerald-300">
+                            <span>📲 SCAtoPDFを無料ダウンロード</span>
+                        </a>
+                        <a href="../pachisca/" class="inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-6 py-4 text-sm font-bold text-white transition hover:bg-white/10">
+                            <span>👀 連携カメラ「PachiSCA」を見る</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="glass-card mx-auto max-w-sm overflow-hidden rounded-3xl p-4 shadow-2xl">
+                        <img src="../assets/scatopdf_demo.jpg" alt="SCAtoPDFのアプリ画面（60枚の画像を一括PDF変換）" class="w-full rounded-2xl object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="py-12 border-t border-white/10">
+            <h2 class="text-2xl font-black sm:text-3xl mb-8 text-center">主な機能・特徴</h2>
+            <div class="grid gap-6 md:grid-cols-3">
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-lg font-bold text-emerald-400">1. 一括ソート＆ドラッグ並べ替え</h3>
+                    <p class="mt-2 text-sm text-slate-300">「日付の古い順」「新しい順」「追加順」での一括整列に加え、直感的なドラッグ操作でページ順を自由に入れ替えられます。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-lg font-bold text-emerald-400">2. A4サイズ指定＆画質調整</h3>
+                    <p class="mt-2 text-sm text-slate-300">「画像サイズに合わせる」だけでなく、「A4自動回転」「A4縦・横固定」やPDF画質のカスタマイズに対応。印刷やレポート提出にも最適です。</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-lg font-bold text-emerald-400">3. 100% オンデバイス変換</h3>
+                    <p class="mt-2 text-sm text-slate-300">PDF生成はすべてiPhone内で完結。社外秘の書類や個人のノートが外部サーバーに送信されることは一切ありません。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10 bg-slate-950 py-10 text-sm text-slate-400 mt-12">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <p class="font-bold text-white">SCAtoPDF — Fast Image to PDF Converter</p>
+                <p class="text-xs text-slate-500 mt-1">© 2026 MASAHIRO SAITO (masax66x). All rights reserved.</p>
+            </div>
+            <div class="flex flex-wrap gap-5 text-xs font-medium">
+                <a href="../index.html" class="hover:text-white transition">開発アプリ一覧</a>
+                <a href="../pachisca/" class="hover:text-[#00FAEF] transition">PachiSCA 特設LP</a>
+                <a href="spec.md" class="hover:text-emerald-400 transition">仕様書 (spec.md)</a>
+                <a href="privacy.md" class="hover:text-emerald-400 transition">プライバシーポリシー (privacy.md)</a>
+                <a href="terms.md" class="hover:text-emerald-400 transition">サポート・FAQ (terms.md)</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

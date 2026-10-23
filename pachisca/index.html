@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PachiSCA（パチスカ）| 両手で本を押さえたまま、まばたきで連続スキャン — 生成AI取り込み・非破壊自炊カメラ</title>
+    <meta name="description" content="分厚い本や参考書を両手で押さえたまま、まばたき（0.4秒閉眼）だけで自動シャッター。本を裁断せずに連続スキャンし、SCAtoPDFと連携してGemini NotebookやChatGPTなどの生成AIへ最速で取り込める完全無料のiPhoneカメラアプリ。">
+    <link rel="canonical" href="https://masax66x-dev.github.io/pachisca/">
+
+    <!-- iOS Safari Smart App Banner (1-Tap App Store Install Banner) -->
+    <meta name="apple-itunes-app" content="app-id=6759353652">
+
+    <!-- Open Graph / Twitter Card -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PachiSCA（パチスカ）— 両手で本を押さえたまま、まばたきで連続スキャン">
+    <meta property="og:description" content="画面タップ一切不要！両手で本を開いたまま、まばたきだけでサクサク電子化。生成AI（Gemini Notebook / ChatGPT）への資料取り込みや非破壊自炊に最適な無料iOSカメラアプリ。">
+    <meta property="og:url" content="https://masax66x-dev.github.io/pachisca/">
+    <meta property="og:image" content="https://masax66x-dev.github.io/assets/pachisca_demo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PachiSCA（パチスカ）— まばたきで撮影するハンズフリー書籍スキャンカメラ">
+    <meta name="twitter:description" content="両手で本を押さえたまま、まばたきで自動シャッター！生成AIへの取り込み・非破壊自炊が爆速で完結する無料iOSアプリ。">
+    <meta name="twitter:image" content="https://masax66x-dev.github.io/assets/pachisca_demo.jpg">
+
+    <!-- AI Crawler / GEO / LLMO Discovery Links -->
+    <link rel="alternate" type="text/markdown" title="PachiSCA Technical Specification (Markdown)" href="spec.md">
+    <link rel="privacy-policy" href="privacy.md">
+    <link rel="terms-of-service" href="terms.md">
+
+    <!-- Tailwind CSS CDN (Zero Build Cost) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #070b14;
+            color: #f8fafc;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+        }
+        .cyan-glow {
+            box-shadow: 0 0 40px -10px rgba(0, 250, 239, 0.35);
+        }
+    </style>
+
+    <!-- JSON-LD Structured Data for Google Search & AI Crawlers (GEO / LLMO) -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "PachiSCA",
+        "alternateName": ["パチスカ", "PachiSCA - まばたきカメラ", "Blink to Scan Camera"],
+        "operatingSystem": "iOS 26.0 or later",
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "Document Scanner & Hands-Free Camera",
+        "url": "https://masax66x-dev.github.io/pachisca/",
+        "downloadUrl": "https://apps.apple.com/app/pachisca/id6759353652",
+        "installUrl": "https://apps.apple.com/app/pachisca/id6759353652",
+        "screenshot": [
+          "https://masax66x-dev.github.io/assets/pachisca_demo.jpg",
+          "https://masax66x-dev.github.io/assets/scatopdf_demo.jpg"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "JPY"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "MASAHIRO SAITO",
+          "url": "https://masax66x-dev.github.io/"
+        },
+        "description": "両手で本やノートを押さえたまま、まばたき（0.4秒閉眼）だけでシャッターが切れるハンズフリー連続スキャンカメラ。本を裁断せずに電子化し、SCAtoPDFと連携してGemini NotebookやChatGPT等の生成AIに最速で取り込めます。",
+        "featureList": [
+          "フロント＆リア同時カメラ稼働（AVCaptureMultiCamSession）によるハンズフリー撮影",
+          "Apple Visionフレームワーク（EAR算出）＋0.4秒閉眼ホールド判定で誤爆を防止",
+          "目の感度スライダー（デフォルト0.18）と練習用テストモード搭載",
+          "1.0x〜5.0xズーム調整および左右UIレイアウト切替",
+          "専用アルバム「PachiSCA Scan」への自動整理保存",
+          "100%オンデバイスAI処理（顔データや写真の外部サーバー送信ゼロ）"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "本を裁断せずに（非破壊で）電子化して生成AI（Gemini NotebookやChatGPT）に取り込むにはどうすればいいですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "iPhoneを卓上スタンドに固定し、PachiSCAを使って両手で本を開いて押さえたまま「まばたき（0.4秒目を閉じる）」で連続撮影します。撮影された画像は自動的に「PachiSCA Scan」アルバムに保存されるため、姉妹アプリ「SCAtoPDF」で一括選択して1つのPDFに結合すれば、そのままGemini NotebookやChatGPT、ClaudeにアップロードしてAI要約・検索に活用できます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "普通のまばたきで誤ってシャッターが切れませんか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "無意識の自然なまばたき（0.1〜0.2秒）では反応せず、意識的に「0.4秒間目を閉じたとき」にのみシャッターが切れる誤作動防止設計になっています。また、目の感度スライダーや写真保存なしの「テストモード」で事前に最適な感度に調整できます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "インカメラの顔データはどこかに送信されますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "いいえ。まばたき検知はApple純正のVisionフレームワークを用いて100% iPhone端末内（オンデバイス）のメモリ上でのみ処理されます。顔画像や特徴点データが端末に保存されたり外部サーバーへ送信されたりすることは一切ありません。"
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+</head>
+<body class="antialiased selection:bg-cyan-400 selection:text-slate-950">
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+            <div class="flex items-center gap-3">
+                <a href="../index.html" class="text-sm font-semibold text-slate-400 hover:text-white transition">← masax66x Apps</a>
+                <span class="text-slate-700">/</span>
+                <div class="flex items-center gap-2">
+                    <img src="../assets/pachisca.png" alt="PachiSCA Icon" class="h-7 w-7 rounded-lg border border-white/15">
+                    <span class="font-extrabold tracking-tight text-white">PachiSCA</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="spec.md" class="hidden sm:inline-block text-xs font-medium text-slate-400 hover:text-cyan-300 transition">仕様書 (spec.md)</a>
+                <a href="https://apps.apple.com/app/pachisca/id6759353652" target="_blank" rel="noopener" class="rounded-full bg-[#00FAEF] px-4 py-1.5 text-xs font-extrabold text-slate-950 shadow hover:bg-cyan-300 transition">
+                    App Store (無料)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 sm:px-6">
+
+        <!-- Hero Section -->
+        <section class="py-12 md:py-20">
+            <div class="grid items-center gap-10 lg:grid-cols-12">
+                <!-- Left Column: Copy & CTA -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-1 text-xs font-bold text-[#00FAEF]">
+                        <span>👀 まばたきハンズフリー撮影</span>
+                        <span>•</span>
+                        <span>生成AI取り込み・非破壊自炊に最適</span>
+                    </div>
+
+                    <h1 class="text-3xl font-black leading-tight tracking-tight sm:text-5xl">
+                        両手で本を押さえたまま、<br>
+                        <span class="text-[#00FAEF]">まばたきで連続スキャン。</span>
+                    </h1>
+
+                    <p class="text-base leading-relaxed text-slate-300 sm:text-lg">
+                        分厚い専門書・参考書・ノートを電子化して <strong>Gemini Notebook</strong> や <strong>ChatGPT / Claude</strong> に取り込みたいのに、両手でページを押さえるとシャッターが押せない——。<br>
+                        <strong>PachiSCA（パチスカ）</strong> は、画面タップ一切不要。<strong>0.4秒目を閉じるだけ</strong>でパシャッと撮影できる、完全無料のハンズフリースキャンカメラです。
+                    </p>
+
+                    <!-- Primary CTAs -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="https://apps.apple.com/app/pachisca/id6759353652" target="_blank" rel="noopener" class="cyan-glow inline-flex items-center gap-2 rounded-2xl bg-[#00FAEF] px-7 py-4 text-base font-black text-slate-950 transition hover:scale-[1.02] hover:bg-cyan-300">
+                            <span>📲 PachiSCAを無料ダウンロード</span>
+                        </a>
+                        <a href="https://apps.apple.com/app/scatopdf/id6759510153" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-6 py-4 text-sm font-bold text-white transition hover:bg-white/10">
+                            <span>📑 連携PDF化アプリ「SCAtoPDF」</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="grid grid-cols-3 gap-3 pt-4 text-center sm:max-w-lg">
+                        <div class="glass-card rounded-xl p-3">
+                            <div class="text-lg font-black text-[#00FAEF]">0.4秒</div>
+                            <div class="text-xs text-slate-400">誤爆を防ぐ閉眼判定</div>
+                        </div>
+                        <div class="glass-card rounded-xl p-3">
+                            <div class="text-lg font-black text-emerald-400">100%</div>
+                            <div class="text-xs text-slate-400">端末内AI・送信ゼロ</div>
+                        </div>
+                        <div class="glass-card rounded-xl p-3">
+                            <div class="text-lg font-black text-amber-300">¥0</div>
+                            <div class="text-xs text-slate-400">完全無料・課金なし</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Real Demo Photo -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card relative mx-auto max-w-sm overflow-hidden rounded-3xl p-3 shadow-2xl">
+                        <img src="../assets/pachisca_demo.jpg" alt="両手で本を押さえながらPachiSCAでまばたきスキャンしている実演風景" class="w-full rounded-2xl object-cover">
+                        <div class="mt-3 flex items-center justify-between px-2 py-1 text-xs text-slate-300">
+                            <span class="font-bold text-[#00FAEF]">▲ 実際のハンズフリー撮影風景</span>
+                            <span>画面タップ一切不要</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3-Step AI Digitization Workflow -->
+        <section class="py-12 border-t border-white/10">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <h2 class="text-2xl font-black sm:text-3xl">
+                    本を傷つけず、<span class="text-[#00FAEF]">生成AIへ最速で取り込む</span>3ステップ
+                </h2>
+                <p class="mt-3 text-sm text-slate-400 sm:text-base">
+                    裁断機も専用スキャナーも不要。スマホスタンド1つで、紙の書籍やノートをAIの知識ソースへ変換できます。
+                </p>
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-3">
+                <!-- Step 1 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <span class="inline-block rounded-full bg-cyan-400/15 px-3 py-1 text-xs font-extrabold text-[#00FAEF]">STEP 1 • PachiSCA</span>
+                        <h3 class="mt-4 text-xl font-bold text-white">両手で本を押さえて「まばたき連写」</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-slate-300">
+                            スマホをスタンドに置き、両手でページをしっかり開いて押さえます。<strong>「ページをめくる ➔ 0.4秒目を閉じる」</strong>の繰り返しだけで、専用アルバム <code class="text-cyan-300">PachiSCA Scan</code> に次々と保存されます。
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-white/10 text-xs text-slate-400">
+                        💡 テストモード付きで、撮影前に目の感度を0.01単位で微調整可能
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <span class="inline-block rounded-full bg-emerald-400/15 px-3 py-1 text-xs font-extrabold text-emerald-400">STEP 2 • SCAtoPDF</span>
+                        <h3 class="mt-4 text-xl font-bold text-white">60ページでも数秒で1つのPDFに結合</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-slate-300">
+                            姉妹アプリ <strong>SCAtoPDF</strong>（無料）を開き、<code class="text-emerald-300">PachiSCA Scan</code> アルバムの写真を選択してボタンを1回タップするだけ。順番並べ替え・ファイル名指定もワンタップ。
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-white/10">
+                        <a href="https://apps.apple.com/app/scatopdf/id6759510153" target="_blank" rel="noopener" class="text-xs font-bold text-emerald-400 hover:underline">
+                            → SCAtoPDFをApp Storeで見る
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <span class="inline-block rounded-full bg-amber-400/15 px-3 py-1 text-xs font-extrabold text-amber-300">STEP 3 • 生成AI活用</span>
+                        <h3 class="mt-4 text-xl font-bold text-white">Gemini NotebookやChatGPTへ投入</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-slate-300">
+                            完成したPDFを <strong>Gemini Notebook</strong>・<strong>ChatGPT</strong>・<strong>Claude</strong> にそのままアップロード。専門書の要約、試験問題の作成、資料横断検索がすぐに行えます。
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-white/10 text-xs text-slate-400">
+                        🤖 高解像度カメラ撮影だからAIのOCR（文字認識）精度も抜群
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features & Specs -->
+        <section class="py-12 border-t border-white/10">
+            <div class="grid items-center gap-10 lg:grid-cols-12">
+                <div class="lg:col-span-7 space-y-6">
+                    <h2 class="text-2xl font-black sm:text-3xl">
+                        実用性を追求した<span class="text-[#00FAEF]">5つの設計</span>
+                    </h2>
+
+                    <div class="space-y-4">
+                        <div class="glass-card rounded-xl p-4">
+                            <h3 class="font-bold text-white">1. 自然なまばたきでは誤爆しない「0.4秒ホールド判定」</h3>
+                            <p class="mt-1 text-sm text-slate-300">Apple Visionフレームワークで左右の目の開閉度（EAR値）を毎秒20回解析。無意識の瞬き（0.1〜0.2秒）をスルーし、意識的に0.4秒閉じたときだけシャッターを切ります。</p>
+                        </div>
+                        <div class="glass-card rounded-xl p-4">
+                            <h3 class="font-bold text-white">2. 目の感度スライダー ＆ 写真保存なしの「テストモード」</h3>
+                            <p class="mt-1 text-sm text-slate-300">スタンドの角度や照明に合わせて感度スライダーを直感調整。「テストモード」をONにすれば、カメラロールを汚さずにシャッター反応だけを事前チェックできます。</p>
+                        </div>
+                        <div class="glass-card rounded-xl p-4">
+                            <h3 class="font-bold text-white">3. 専用アルバム「PachiSCA Scan」への自動振り分け</h3>
+                            <p class="mt-1 text-sm text-slate-300">撮影した本のページは自動的に専用アルバムへ整理されるため、プライベートな写真と混ざりません。</p>
+                        </div>
+                        <div class="glass-card rounded-xl p-4">
+                            <h3 class="font-bold text-white">4. 1.0x〜5.0x ズーム ＆ 左右パネル切替</h3>
+                            <p class="mt-1 text-sm text-slate-300">スタンドの高さに合わせたズーム調整や、横画面時の操作パネル左右入れ替えに対応。</p>
+                        </div>
+                        <div class="glass-card rounded-xl p-4">
+                            <h3 class="font-bold text-white">5. 100% オンデバイス処理でプライバシー完全保護</h3>
+                            <p class="mt-1 text-sm text-slate-300">インカメラの映像や顔の特徴点データは端末メモリ上でのみリアルタイム判定に使われ、保存・外部送信は一切行われません。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Companion App Preview -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card mx-auto max-w-sm rounded-3xl p-4 text-center">
+                        <span class="text-xs font-bold text-emerald-400">ベストパートナーアプリ</span>
+                        <h3 class="mt-1 text-lg font-extrabold text-white">SCAtoPDF で一括PDF化</h3>
+                        <img src="../assets/scatopdf_demo.jpg" alt="SCAtoPDFで60枚のスキャン画像を1つのPDFに結合する画面" class="mt-3 w-full rounded-2xl border border-white/10">
+                        <p class="mt-3 text-xs text-slate-400">
+                            PachiSCAで撮った連番ページをワンタップでPDF化
+                        </p>
+                        <a href="https://apps.apple.com/app/scatopdf/id6759510153" target="_blank" rel="noopener" class="mt-4 inline-block w-full rounded-xl bg-emerald-400 py-3 text-sm font-black text-slate-950 hover:bg-emerald-300 transition">
+                            SCAtoPDF も無料で入手する
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-12 border-t border-white/10">
+            <h2 class="text-2xl font-black text-center sm:text-3xl mb-8">よくある質問 (FAQ)</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="font-bold text-[#00FAEF]">Q. まばたきの感度調整はどうすればいいですか？</h3>
+                    <p class="mt-2 text-sm text-slate-300 leading-relaxed">
+                        画面中央にリアルタイム表示される <code class="text-white">EYE: 0.19 (L) / 0.20 (R)</code> の数値を見ながら、目を閉じたときの値より少し上に「Eye Sensitivity」スライダーを合わせてください。左下の「Test」ボタンを押せば写真を保存せずに何度でも練習できます。
+                    </p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="font-bold text-[#00FAEF]">Q. どんなスマホスタンドを使えばいいですか？</h3>
+                    <p class="mt-2 text-sm text-slate-300 leading-relaxed">
+                        100円ショップや市販の一般的な卓上スマホスタンド、またはグースネック（アーム）スタンドでOKです。背面カメラに本が映り、前面カメラにあなたの顔が映る角度に置けば準備完了です。
+                    </p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="font-bold text-[#00FAEF]">Q. なぜ「電子化して生成AIに取り込む」のに向いているのですか？</h3>
+                    <p class="mt-2 text-sm text-slate-300 leading-relaxed">
+                        Gemini NotebookやChatGPT、Claudeは、多少の湾曲や指が映り込んだページ写真でも極めて高いOCR精度でテキストを読み取れます。そのため「綺麗に裁断スキャンする」必要がなく、PachiSCAで両手で開いてパシャパシャ撮ってPDF化するだけで実用十分なAI知識ベースが作れます。
+                    </p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="font-bold text-[#00FAEF]">Q. 料金はかかりますか？</h3>
+                    <p class="mt-2 text-sm text-slate-300 leading-relaxed">
+                        PachiSCA、およびPDF結合アプリSCAtoPDFともに<strong>完全無料</strong>（アプリ内課金なし・バナー広告のみ）で全機能をお使いいただけます。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section class="my-12 rounded-3xl border border-cyan-400/30 bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-950/50 p-8 text-center sm:p-12">
+            <h2 class="text-2xl font-black sm:text-4xl">
+                あなたの本棚を、今日から<span class="text-[#00FAEF]">生成AIの知識</span>に。
+            </h2>
+            <p class="mx-auto mt-3 max-w-xl text-sm text-slate-300 sm:text-base">
+                両手で本を押さえたまま、まばたきでパシャッ。新しいハンズフリー電子化体験を今すぐ無料でお試しください。
+            </p>
+            <div class="mt-6 flex flex-wrap justify-center gap-4">
+                <a href="https://apps.apple.com/app/pachisca/id6759353652" target="_blank" rel="noopener" class="cyan-glow rounded-2xl bg-[#00FAEF] px-8 py-4 text-base font-black text-slate-950 hover:bg-cyan-300 transition">
+                    App Storeで「PachiSCA」を入手
+                </a>
+                <a href="https://apps.apple.com/app/scatopdf/id6759510153" target="_blank" rel="noopener" class="rounded-2xl border border-white/20 bg-white/5 px-6 py-4 text-sm font-bold text-white hover:bg-white/10 transition">
+                    姉妹アプリ「SCAtoPDF」を入手
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer with Markdown Document Links for Humans & AI Crawlers -->
+    <footer class="border-t border-white/10 bg-slate-950 py-10 text-sm text-slate-400">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <p class="font-bold text-white">PachiSCA（パチスカ）— Hands-Free Blink Scanner</p>
+                <p class="text-xs text-slate-500 mt-1">© 2026 MASAHIRO SAITO (masax66x). All rights reserved.</p>
+            </div>
+            <div class="flex flex-wrap gap-5 text-xs font-medium">
+                <a href="../index.html" class="hover:text-white transition">開発アプリ一覧</a>
+                <a href="spec.md" class="hover:text-[#00FAEF] transition">機能仕様書 (spec.md)</a>
+                <a href="privacy.md" class="hover:text-[#00FAEF] transition">プライバシーポリシー (privacy.md)</a>
+                <a href="terms.md" class="hover:text-[#00FAEF] transition">利用規約・FAQ (terms.md)</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

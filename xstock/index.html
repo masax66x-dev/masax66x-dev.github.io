@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X株ストック - スクショから日本株の銘柄コードを自動抽出・メモ管理 | iOSアプリ</title>
+    <meta name="description" content="SNSやWebで気になった日本株のスクリーンショットから、4桁の証券コードと銘柄名を自動抽出してストック管理できるiOSアプリ。">
+    <meta name="keywords" content="X株ストック,日本株,銘柄管理,株メモ,スクショ,証券コード,OCR,個人投資家,iOSアプリ,masax66x">
+    <link rel="canonical" href="https://masax66x-dev.github.io/xstock/">
+
+    <!-- iOS Smart App Banner -->
+    <meta name="apple-itunes-app" content="app-id=6757352103">
+
+    <!-- OGP -->
+    <meta property="og:title" content="X株ストック - スクショから日本株の銘柄コードを自動抽出・メモ管理">
+    <meta property="og:description" content="SNSで見かけた気になる日本株のスクショから4桁の証券コード・企業名を自動検出。画像と一言メモをセットで素早くストック！">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://masax66x-dev.github.io/xstock/">
+    <meta property="og:image" content="https://masax66x-dev.github.io/assets/xstock.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@masax66x">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Structured Data (JSON-LD) for GEO / SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "X株ストック",
+      "operatingSystem": "iOS",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY"
+      },
+      "installUrl": "https://apps.apple.com/jp/app/id6757352103",
+      "description": "スクリーンショットや画像からオンデバイスOCRで日本株の4桁証券コードと企業名を自動抽出し、画像と一言メモを紐づけて管理できる個人投資家向けiOSアプリ。",
+      "featureList": [
+        "スクリーンショットからの4桁証券コード・企業名自動抽出（オンデバイスOCR）",
+        "東証上場銘柄マスタ内蔵による高精度マッチング",
+        "ピンチズーム対応のスクリーンショット画像添付と一言メモ管理",
+        "完全オンデバイス保存による高いプライバシー保護"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "MASAHIRO SAITO",
+        "url": "https://masax66x-dev.github.io/"
+      }
+    }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="../" class="text-sm font-medium text-slate-400 hover:text-white transition flex items-center gap-1.5">
+                <span>←</span> <span>masax66x Apps 一覧</span>
+            </a>
+            <a href="https://apps.apple.com/jp/app/id6757352103" target="_blank" rel="noopener"
+               class="bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold px-4 py-2 rounded-full transition shadow-lg shadow-amber-500/25">
+                App Storeで入手
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 pt-10 pb-20">
+        <!-- Hero -->
+        <section class="text-center mb-14">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold mb-6">
+                <span>📈 スクショから証券コードを自動抽出</span>
+            </div>
+            <div class="flex justify-center mb-6">
+                <img src="../assets/xstock.jpg" alt="X株ストック アプリアイコン" class="w-24 h-24 rounded-3xl shadow-2xl border border-slate-800">
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-white via-amber-100 to-amber-400 bg-clip-text text-transparent">
+                X株ストック
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-8">
+                SNSで見かけた気になる銘柄のスクショをそのまま取り込み。<br class="hidden sm:inline">
+                <strong class="text-white">4桁の証券コード・銘柄名</strong>を自動抽出して、画像＆メモと一緒にスマート管理。
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://apps.apple.com/jp/app/id6757352103" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-2 bg-white text-slate-950 hover:bg-slate-200 font-bold px-7 py-3.5 rounded-2xl transition shadow-xl text-base">
+                    <span>🍎 App Storeで無料ダウンロード</span>
+                </a>
+                <a href="./spec.md" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 font-medium px-5 py-3.5 rounded-2xl transition text-sm">
+                    <span>📄 仕様書 (spec.md)</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="mb-14">
+            <h2 class="text-2xl font-bold mb-6 text-center">主な特徴・機能</h2>
+            <div class="grid sm:grid-cols-2 gap-5">
+                <div class="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-6">
+                    <div class="text-amber-400 font-bold text-sm mb-1">FEATURE 01</div>
+                    <h3 class="text-lg font-bold mb-2">スクショから銘柄コードを自動検出</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        X（旧Twitter）や株情報サイトのスクリーンショットを読み込むだけで、内蔵の東証銘柄マスタと照合し4桁コードと社名を自動リストアップします。
+                    </p>
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-6">
+                    <div class="text-amber-400 font-bold text-sm mb-1">FEATURE 02</div>
+                    <h3 class="text-lg font-bold mb-2">元画像（拡大対応）＆一言メモを保存</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        「どの投稿・チャートで気になったのか」を忘れないよう、元のスクリーンショット画像（ピンチズーム対応）とメモをセットで記録できます。
+                    </p>
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-6">
+                    <div class="text-amber-400 font-bold text-sm mb-1">FEATURE 03</div>
+                    <h3 class="text-lg font-bold mb-2">複数銘柄の一括取り込みにも対応</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        監視銘柄一覧やテーマ株まとめ画像など、1枚の画像に複数の銘柄が含まれている場合でも候補を一括検出し、必要な銘柄を選んで登録できます。
+                    </p>
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-6">
+                    <div class="text-amber-400 font-bold text-sm mb-1">FEATURE 04</div>
+                    <h3 class="text-lg font-bold mb-2">完全オンデバイス・外部送信ゼロ</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        文字認識（OCR）も保存した銘柄リストもすべてiPhone内で完結。大切な投資メモや画像が外部サーバーに送信されることはありません。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Links / Support -->
+        <section class="border-t border-slate-800/80 pt-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
+            <div class="flex flex-wrap gap-6">
+                <a href="./spec.md" class="hover:text-white transition">仕様詳細 (spec.md)</a>
+                <a href="./privacy.md" class="hover:text-white transition">プライバシーポリシー (privacy.md)</a>
+                <a href="https://github.com/masax66x-dev/masax66x-dev.github.io/issues" target="_blank" rel="noopener" class="hover:text-white transition">サポート・お問い合わせ</a>
+            </div>
+            <div>© 2026 MASAHIRO SAITO (masax66x)</div>
+        </section>
+    </main>
+</body>
+</html>
