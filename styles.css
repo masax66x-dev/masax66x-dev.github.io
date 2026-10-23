@@ -251,15 +251,18 @@ main {
 /* Buttons */
 .actions {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
 }
 
 .btn {
-    padding: 12px 24px;
+    padding: 12px 20px;
     border-radius: 14px;
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
+    white-space: nowrap;
+    text-align: center;
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
