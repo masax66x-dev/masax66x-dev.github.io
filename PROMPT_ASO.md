@@ -231,9 +231,9 @@ camera,photo,overlay,azimuth,compass,report,stamp,AI,cutout,GPS,location,date,no
 【写真を選ぶだけで爆笑ヘディング写真が完成！】AIが顔を自動認識し、サッカー・野球・バスケなど人気9大球技のボールを頭頂部1mmにピタッと配置。さらに上空からボールが落ちてくるダイナミック動画も一瞬で生成！完全オンデバイス処理で写真が外部に送信されない安心設計。部活や友達の思い出を盛り上げよう！
 ```
 
-#### 🇺🇸 英語（164文字 / 170文字制限）
+#### 🇺🇸 英語 (English - U.S.)（ジャスト170文字 / 170文字上限）
 ```text
-Instant AI face detection balances 9 sports balls 1mm above heads! Create custom balls, auto-unify group photos, and export dynamic sequential fly-in videos. 100% free!
+1mm determines victory! AI balances 9 sports balls atop heads. Relive miracle edge-of-the-court moments, create custom balls & export sequential fly-in videos. 100% free!
 ```
 
 ---
@@ -245,9 +245,9 @@ Instant AI face detection balances 9 sports balls 1mm above heads! Create custom
 サッカー,野球,バスケ,テニス,バレー,アメフト,部活,コラージュ,ネタ,加工,ラグビー,ホッケー,クリケット,スポーツ,おもしろ,スタンプ,カメラ,ショート,友達,応援,観戦,無料,サポーター,記念
 ```
 
-#### 🇺🇸 英語キーワード（95バイト / 100バイト上限 ※日本ストアでも合算インデックス）
+#### 🇺🇸 英語キーワード（ジャスト100文字 / 100文字上限 ※日本ストア合算インデックス＆9競技全網羅）
 ```text
-soccer,baseball,basketball,football,tennis,volleyball,rugby,sports,funny,photo,head,ball,camera
+soccer,baseball,basketball,football,tennis,volleyball,rugby,hockey,cricket,funny,photo,reels,collage
 ```
 
 ---
