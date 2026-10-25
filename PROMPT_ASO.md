@@ -282,22 +282,48 @@ What's New in 1mmHeadBall v1.4:
 
 #### 🇯🇵 日本語
 ```text
-「部活や友達の集合写真、普通に撮るだけじゃなくて面白く盛り上げたい！」
-「TikTokやInstagramリールで一瞬で目を引く、インパクトのあるショート動画を作りたい！」
+「1mmの精度が勝敗を分ける」
 
-1mmHeadBall（1ミリ・ヘッドボール）は、AppleのオンデバイスAI（Vision）を活用して写真内の顔を瞬時に検出し、頭頂部ギリギリ（1mm上）に人気球技のボールをピタッと配置するエンタメ写真＆動画作成アプリです。
+弾丸のようなシュートが飛んでくる。ほんの一瞬、ボールが頭にわずか「1ミリ」だけ触れ、絶妙にコースを変えてゴールネットを揺らす——。
+
+「1mmHeadBall」は、スポーツの試合で最も劇的で、極限の集中力が生み出す「奇跡の1ミリの瞬間」を再現し、選手の張り詰めた熱狂と緊張感をファンとして体感・共有するためのアプリです。
+
+サッカーの劇的ヘディング弾、野球、バスケ、テニス、バレー……写真の中のあなたの頭の上に、絶妙なバランスでボールを配置。
+あの勝敗を分ける「ギリギリ」の瞬間の熱狂をあなた自身で体感し、仲間やスポーツファン同士でシェアして盛り上がりましょう！
 
 【主な特徴】
 1. 9大人気球技 ＆ 球種連動スタジアム背景:
-   サッカー、野球、テニス、バレーボール、バスケットボール、アメリカンフットボール、ラグビー、アイスホッケー、クリケットの全9種に対応。選んだ球種に合わせて背景がリアルタイムに各競技のフィールドやコートに切り替わります。
+   サッカー、野球、テニス、バレーボール、バスケットボール、アメリカンフットボール、ラグビー、アイスホッケー、クリケットの全9種に対応。選んだ球種に合わせて背景がリアルタイムに各競技のフィールドやコートにダイナミック変化します。
 2. Vision AI による顔自動認識＆全体サイズ統一:
    複数人が並んだ集合写真でも、全員の顔を自動検出してボールの大きさを綺麗に統一配置。
 3. カスタムボール作成（AI自動切り抜き）:
-   写真ライブラリの画像から、好きなボールをAIが自動で切り抜いてカスタム球として登録・名前変更可能！
+   写真ライブラリの画像から、愛用のマイボールやチームのボールをAIが自動で切り抜いてカスタム球として登録・名前変更可能！
 4. 順番に降ってくる！ダイナミックショート動画生成:
    ボールが上空から回転しながら順番に落ちてくる躍動感あるMP4動画を自動生成。SNSで注目を集めること間違いなし！
 5. 安心の100%完全オンデバイス処理:
    写真や顔データが外部サーバーに送信されることは一切ありません。オフラインでも安心してご利用いただけます。
+```
+
+#### 🇺🇸 英語 (English - U.S.)
+```text
+"1 millimeter determines victory or defeat."
+
+A bullet-fast shot flies through the air. In a split second, the ball grazes the head by just 1mm, subtly changing trajectory to shake the net...
+
+"1mmHeadBall" is created for sports fans to relive and share the dramatic, edge-of-your-seat intensity of that "miracle 1mm touch." 
+Precisely balance soccer, baseball, basketball, and 9 sports balls atop your head in any photo. Feel the heart-pounding tension of decisive sports moments and share the passion with your teammates and fellow fans!
+
+[Key Features]
+1. 9 Popular Sports & Dynamic Stadium Courts:
+   Supports Soccer, Baseball, Tennis, Volleyball, Basketball, Football, Rugby, Ice Hockey, and Cricket. The background dynamically changes into authentic sports courts matching your ball!
+2. Vision AI Face Detection & Unified Scaling:
+   Automatically detects faces in group photos and balances ball sizes cleanly for everyone.
+3. Custom Ball Creation (AI Auto-Cutout):
+   Import and automatically cut out your favorite ball from your photo library to register as a custom ball!
+4. Dynamic Sequential Fly-In Video Generation:
+   Generate dramatic MP4 videos with balls flying in sequentially with realistic contact AO shadowing.
+5. 100% On-Device Privacy:
+   All image processing is performed entirely on your device. No personal data or photos are ever sent to external servers.
 ```
 
 ---
