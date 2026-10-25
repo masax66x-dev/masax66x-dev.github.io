@@ -219,8 +219,8 @@ camera,photo,overlay,azimuth,compass,report,stamp,AI,cutout,GPS,location,date,no
   - **名前 (Title):** `1mmHeadBall - AI顔認識ヘディング写真合成` （27文字）
   - **サブタイトル (Subtitle):** `写真を選ぶだけで頭にピタッ！9大球技の爆笑写真＆動画作成` （28文字）
 - **🇺🇸 英語 (English)**
-  - **Name (Title):** `1mmHeadBall: AI Face Header` （26 chars）
-  - **Subtitle:** `9 Sports Balls & Animated Video` （30 chars）
+  - **Name (Title):** `1mmHeadBall: AI Face Header` （27文字 / 30文字制限）
+  - **Subtitle:** `9 Sports Balls & Dynamic Video` （30文字 / 30文字制限）
 
 ---
 
