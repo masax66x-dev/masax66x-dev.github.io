@@ -209,10 +209,15 @@ camera,photo,overlay,azimuth,compass,report,stamp,AI,cutout,GPS,location,date,no
 
 ## 5. 1mmHeadBall（`id6781898961`）ASOメタデータ（v1.4 更新版・コピペ用）
 
-### 5.1 タイトル & サブタイトル（最大30文字）
+> **【APP_STORE_MARKETING_STRATEGY 準拠】**
+> - タイトル・サブタイトルに含まれる単語（AI, 顔認識, ヘディング, 写真, 合成, 動画等）はキーワード欄から完全排除し、枠を100%有効活用。
+> - 日本語キーワードはUTF-8で99バイト（上限100バイト厳守）。
+> - 英語（US）キーワードも95バイトで配置し、日本ストアでのインデックス数を倍増。
+
+### 5.1 タイトル & サブタイトル（各30文字以内厳守）
 - **🇯🇵 日本語**
-  - **名前 (Title):** `1mmHeadBall - AI顔認識ヘディング＆動画作成` （27文字）
-  - **サブタイトル (Subtitle):** `頭頂部1mmに9大球技を自動配置！写真から躍動感ショート動画` （30文字）
+  - **名前 (Title):** `1mmHeadBall - AI顔認識ヘディング写真合成` （27文字）
+  - **サブタイトル (Subtitle):** `写真を選ぶだけで頭にピタッ！9大球技の爆笑写真＆動画作成` （28文字）
 - **🇺🇸 英語 (English)**
   - **Name (Title):** `1mmHeadBall: AI Face Header` （26 chars）
   - **Subtitle:** `9 Sports Balls & Animated Video` （30 chars）
@@ -221,9 +226,9 @@ camera,photo,overlay,azimuth,compass,report,stamp,AI,cutout,GPS,location,date,no
 
 ### 5.2 プロモーションテキスト（最大170文字・審査不要で即時反映！）
 
-#### 🇯🇵 日本語（147文字 / 170文字制限）
+#### 🇯🇵 日本語（148文字 / 170文字制限）
 ```text
-【サッカー・野球・バスケなど全9大球技に対応！】AIが写真内の顔を瞬時に検出し、頭頂部ギリギリ1mm上にボールを自動配置！複数人の写真でも全員綺麗にサイズ統一。自分だけのカスタム球作成や、上から順番に降ってくるダイナミックな飛来ショート動画（mp4）もワンタップで生成・共有できます。完全無料。
+【写真を選ぶだけで爆笑ヘディング写真が完成！】AIが顔を自動認識し、サッカー・野球・バスケなど人気9大球技のボールを頭頂部1mmにピタッと配置。さらに上空からボールが落ちてくるダイナミック動画も一瞬で生成！完全オンデバイス処理で写真が外部に送信されない安心設計。部活や友達の思い出を盛り上げよう！
 ```
 
 #### 🇺🇸 英語（164文字 / 170文字制限）
@@ -235,30 +240,56 @@ Instant AI face detection balances 9 sports balls 1mm above heads! Create custom
 
 ### 5.3 キーワード（最大100バイト厳守・スペースなしカンマ区切り）
 
-#### 🇯🇵 日本語キーワード（ジャスト100バイト / 100バイト上限）
+#### 🇯🇵 日本語キーワード（99バイト / 100バイト上限 ※タイトル・サブタイトルと完全非重複）
 ```text
-サッカー,野球,バスケ,顔認識,スポーツ,ヘディング,動画作成,AIカメラ,合成
+サッカー,野球,バスケ,テニス,バレー,アメフト,部活,コラージュ,ネタ,加工
 ```
 
-#### 🇺🇸 英語キーワード（94バイト / 100バイト上限）
+#### 🇺🇸 英語キーワード（95バイト / 100バイト上限 ※日本ストアでも合算インデックス）
 ```text
-face,header,soccer,football,baseball,basketball,sports,ball,collage,sticker,camera,video,reels
+soccer,baseball,basketball,football,tennis,volleyball,rugby,sports,funny,photo,head,ball,camera
 ```
 
 ---
 
-### 5.4 概要・説明文 (Description)
+### 5.4 このバージョンの最新情報（What's New in This Version）
 
 #### 🇯🇵 日本語
 ```text
-「写真に写ったみんなの頭の上に、サッカーや野球のボールを絶妙なバランスで乗せたい！」
-「TikTokやInstagramリールで一瞬で目を引く、面白いショート動画を作りたい！」
+1mmHeadBall v1.4 アップデート！
 
-1mmHeadBall（1ミリ・ヘッドボール）は、AppleのオンデバイスAI（Vision）を活用して、写真内の人物の顔を自動認識し、頭頂部ギリギリ（1mm上）に人気球技のボールをピタッと合成できるエンタメ写真＆動画作成アプリです。
+・【9大球技セレクション】サッカー、野球、バスケに加え、テニス、バレーボール、アメフト、ラグビー、アイスホッケー、クリケットの全9種に対応！
+・【カスタムボール追加】アルバムから好きなボール画像を登録して頭に乗せられるようになりました！
+・【スタジアム背景】選んだボールに合わせてホーム画面が各競技のコート・グラウンドにダイナミック変化！
+・【動画生成の進化】頭上へ落ちてくる順番飛来アニメーションの画質とパフォーマンスを大幅に向上しました。
+・その他、操作性および軽微なUIの改善を行いました。
+```
+
+#### 🇺🇸 英語 (English - U.S.)
+```text
+What's New in 1mmHeadBall v1.4:
+
+- 9 Sports Available: In addition to Soccer, Baseball, and Basketball, enjoy Tennis, Volleyball, American Football, Rugby, Ice Hockey, and Cricket!
+- Custom Ball Registration: Import any ball image from your photo library with automatic cutout!
+- Dynamic Sports Courts: Stadium and court backgrounds automatically switch to match your selected sport.
+- Video Creation Upgrade: Enhanced video encoding and smooth arrival animations.
+- Minor UI improvements and performance optimizations.
+```
+
+---
+
+### 5.5 概要・説明文 (Description)
+
+#### 🇯🇵 日本語
+```text
+「部活や友達の集合写真、普通に撮るだけじゃなくて面白く盛り上げたい！」
+「TikTokやInstagramリールで一瞬で目を引く、インパクトのあるショート動画を作りたい！」
+
+1mmHeadBall（1ミリ・ヘッドボール）は、AppleのオンデバイスAI（Vision）を活用して写真内の顔を瞬時に検出し、頭頂部ギリギリ（1mm上）に人気球技のボールをピタッと配置するエンタメ写真＆動画作成アプリです。
 
 【主な特徴】
 1. 9大人気球技 ＆ 球種連動スタジアム背景:
-   サッカー、野球、テニス、バレーボール、バスケットボール、アメリカンフットボール、ラグビー、アイスホッケー、クリケットの全9種に対応。選択したボールに合わせてコート背景もリアルタイムに切り替わります。
+   サッカー、野球、テニス、バレーボール、バスケットボール、アメリカンフットボール、ラグビー、アイスホッケー、クリケットの全9種に対応。選んだ球種に合わせて背景がリアルタイムに各競技のフィールドやコートに切り替わります。
 2. Vision AI による顔自動認識＆全体サイズ統一:
    複数人が並んだ集合写真でも、全員の顔を自動検出してボールの大きさを綺麗に統一配置。
 3. カスタムボール作成（AI自動切り抜き）:
@@ -267,6 +298,34 @@ face,header,soccer,football,baseball,basketball,sports,ball,collage,sticker,came
    ボールが上空から回転しながら順番に落ちてくる躍動感あるMP4動画を自動生成。SNSで注目を集めること間違いなし！
 5. 安心の100%完全オンデバイス処理:
    写真や顔データが外部サーバーに送信されることは一切ありません。オフラインでも安心してご利用いただけます。
+```
+
+---
+
+### 5.6 SNS（X / Twitter）プロモーション用投稿文
+
+#### 本ポスト（1投稿目：全角139文字 / 成果物画像1枚添付・URL厳禁）
+```text
+友達や部活の集合写真、普通に撮るだけだと盛り上がりに欠けることありませんか😭
+
+自作アプリ「1mmHeadBall」なら
+①写真を選ぶだけで全員の頭に球がピタッ
+②9大球技＋愛用球を登録
+③落ちてくる動画も一瞬
+
+完全無料で写真も外に出ません！
+#個人開発 #iPhoneアプリ
+```
+
+#### リプライ欄（ツリー1段目：導線用）
+```text
+▼ App Store（完全無料DL）
+https://apps.apple.com/us/app/1mmheadball/id6781898961
+
+▼ 図解マニュアル・Webサイト
+https://masax66x-dev.github.io/headball.html
+
+完全オンデバイスAIなので、写真や顔データが外部サーバーに送信されることは一切ありません🔒
 ```
 
 ---
