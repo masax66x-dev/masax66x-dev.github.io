@@ -285,10 +285,11 @@ What's New in 1mmHeadBall v1.4:
 「1mmの精度が勝敗を分ける」
 
 弾丸のようなシュートが飛んでくる。ほんの一瞬、ボールが頭にわずか「1ミリ」だけ触れ、絶妙にコースを変えてゴールネットを揺らす——。
+あるいは、コートの白線上にボールが落ちるわずか「1ミリ」がインかアウトか、勝敗の分水嶺となる——。
 
 「1mmHeadBall」は、スポーツの試合で最も劇的で、極限の集中力が生み出す「奇跡の1ミリの瞬間」を再現し、選手の張り詰めた熱狂と緊張感をファンとして体感・共有するためのアプリです。
 
-サッカーの劇的ヘディング弾、野球、バスケ、テニス、バレー……写真の中のあなたの頭の上に、絶妙なバランスでボールを配置。
+サッカーの劇的ヘディング弾、テニスやバレーの息をのむライン際攻防、野球、バスケ……写真の中のあなたの頭の上に、絶妙なバランスでボールを配置。
 あの勝敗を分ける「ギリギリ」の瞬間の熱狂をあなた自身で体感し、仲間やスポーツファン同士でシェアして盛り上がりましょう！
 
 【主な特徴】
@@ -309,9 +310,10 @@ What's New in 1mmHeadBall v1.4:
 "1 millimeter determines victory or defeat."
 
 A bullet-fast shot flies through the air. In a split second, the ball grazes the head by just 1mm, subtly changing trajectory to shake the net...
+Or that breathless 1mm where the ball clips the court boundary line—the razor-thin watershed between in and out, triumph and defeat...
 
-"1mmHeadBall" is created for sports fans to relive and share the dramatic, edge-of-your-seat intensity of that "miracle 1mm touch." 
-Precisely balance soccer, baseball, basketball, and 9 sports balls atop your head in any photo. Feel the heart-pounding tension of decisive sports moments and share the passion with your teammates and fellow fans!
+"1mmHeadBall" is created for sports fans to relive and share the dramatic, edge-of-your-seat intensity of that "miracle 1mm moment." 
+Precisely balance soccer, tennis, baseball, basketball, and 9 sports balls atop your head in any photo. Feel the heart-pounding tension of decisive sports moments and share the passion with your teammates and fellow fans!
 
 [Key Features]
 1. 9 Popular Sports & Dynamic Stadium Courts:
