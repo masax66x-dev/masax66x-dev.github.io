@@ -1,0 +1,5 @@
+# 内部資料（公開しない）
+PROMPT_ASO.md
+*.local.md
+.env
+.DS_Store
